@@ -24,7 +24,7 @@ if __name__ == '__main__':
         num_axes = joystick.get_numaxes()
         print(f"number of axes: {num_axes}")
 
-        for e in range(10):
+        for e in range(2):
             states = []
             actions = []
         
@@ -53,7 +53,7 @@ if __name__ == '__main__':
         env.close()
 
         # 所有 episode 完成后，保存到一个 CSV 文件
-        with open('./data/combined_data.csv', mode='w', newline='') as file:
+        with open('./data/manual_policy_2_RLR.csv', mode='w', newline='') as file:
             writer = csv.writer(file)
             # 写入表头
             writer.writerow(["episode", "step", "position", "velocity", "action"])

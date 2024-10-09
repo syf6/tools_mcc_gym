@@ -26,7 +26,7 @@ if __name__ == '__main__':
     data_state = []
     data_action = []
 
-    for e in range(100):
+    for e in range(2):
         states = []
         actions = []
     
@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
     # 保存所有数据到 CSV 文件
     os.makedirs('./data', exist_ok=True)
-    with open('./data/fixed_policy_data_100.csv', mode='w', newline='') as file:
+    with open('./data/fixed_policy_data_2.csv', mode='w', newline='') as file:
         writer = csv.writer(file)
         # 写入表头
         writer.writerow(["episode", "step", "position", "velocity", "action"])
